@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block title %}{{ block.super }} - Menu{% endblock %}
+{% block content %}
+    <h2>Welcome to the Hypercar Service!</h2>
+    <ol>
+        {% for link, data in entries.items %}
+            <li><a href="/get_ticket/{{ link }}">{{ data }}</a></li>
+        {% endfor %}
+    </ol>
+{% endblock %}
